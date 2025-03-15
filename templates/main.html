@@ -3,7 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>Главная страница</title>
+    <link rel="stylesheet" href="/static/css/index.css">
 </head>
+<header>
+{% include 'header.html' %}
+</header>
 <body>
 <a href="/login">Авторизация</a>
  <p>{{ text }}</p>
