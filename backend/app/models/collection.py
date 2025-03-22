@@ -1,6 +1,6 @@
-from sqlalchemy import Column, Integer, String, Boolean, ForeignKey
+from sqlalchemy import Column, Integer, String, ForeignKey
 from sqlalchemy.orm import relationship
-from fastapi_service.storage.postgres import Base
+from backend.app.models.init import Base
 
 
 class Collection(Base):

@@ -1,7 +1,6 @@
 from sqlalchemy import Column, Integer, String, Boolean, ForeignKey
 from sqlalchemy.orm import relationship
-from fastapi_service.storage.postgres import Base
-
+from backend.app.models.init import Base
 
 class User(Base):
     __tablename__ = "users"
@@ -12,12 +11,6 @@ class User(Base):
 
     collections = relationship("Collection", back_populates="creator")
     comments = relationship("Comment", back_populates="user")
-
-
-
-
-
-
 
 
 class Card(Base):

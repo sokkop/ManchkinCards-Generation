@@ -19,7 +19,7 @@ services:
 
   fastapi:
     build:
-      context: ./fastapi_service
+      context: ./app
     ports:
       - "8080:8080"
     networks:

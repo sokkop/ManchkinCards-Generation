@@ -3,8 +3,7 @@ from sqlalchemy import (
     UniqueConstraint
 )
 from sqlalchemy.orm import relationship, declarative_base
-
-Base = declarative_base()
+from backend.app.models.init import Base
 
 
 class User(Base):
@@ -36,6 +35,64 @@ class Collection(Base):
 
     creator = relationship("User", back_populates="collections")
 
+
+Base = declarative_base()
+
+# Базовая таблица для всех карт
+class Card(Base):
+    __tablename__ = "cards"
+
+    id = Column(Integer, primary_key=True)
+    type = Column(String, nullable=False)  # Указывает тип карты
+    name = Column(String, nullable=False)
+    description = Column(Text)
+    image = Column(String)
+    is_open = Column(Boolean, default=False)
+    like_count = Column(Integer, default=0)
+
+    __mapper_args__ = {
+        "polymorphic_identity": "card",
+        "polymorphic_on": type,
+    }
+
+# Наследуемая таблица для предметов
+class ThingCard(Card):
+    __tablename__ = "thing_cards"
+
+    id = Column(Integer, ForeignKey("cards.id"), primary_key=True)
+    bonus_count = Column(Integer, default=0)
+    is_big = Column(Boolean, default=False)
+    arm_count = Column(Integer, default=0)
+    cost = Column(Integer, default=0)
+
+    __mapper_args__ = {
+        "polymorphic_identity": "thing_card",
+    }
+
+# Наследуемая таблица для боссов
+class BossCard(Card):
+    __tablename__ = "boss_cards"
+
+    id = Column(Integer, ForeignKey("cards.id"), primary_key=True)
+    level = Column(Integer, nullable=False)
+    obscenity = Column(String)
+    level_up_count = Column(Integer, default=0)
+    treasure_count = Column(Integer, default=0)
+
+    __mapper_args__ = {
+        "polymorphic_identity": "boss_card",
+    }
+
+# Наследуемая таблица для проклятий
+class CurseCard(Card):
+    __tablename__ = "curse_cards"
+
+    id = Column(Integer, ForeignKey("cards.id"), primary_key=True)
+    curse_text = Column(Text, nullable=False)
+
+    __mapper_args__ = {
+        "polymorphic_identity": "curse_card",
+    }
 
 class Card(Base):
     __tablename__ = "cards"
