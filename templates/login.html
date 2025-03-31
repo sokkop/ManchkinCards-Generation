@@ -2,14 +2,26 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Авторизация</title>
+    <title>Регистрация</title>
+    <link rel="stylesheet" href="/static/css/login.css">
 </head>
 <header>
     {% include 'header.html' %}
 </header>
 <body>
-<p>Тут будет авторизация</p>
-<a href="/">В меню</a>
+<div>
+    <img src="/static/img/manchkin.png" class="manchkin_img">
+</div>
+<div class="main_div">
+<h2 class="reg_text">Регистрация</h2>
+    <div class="input_div">
+        <label>
+            <input type="text" class="input_rec" placeholder="Логин">
+            <input type="password" class="input_rec_2" placeholder="Пароль">
+        </label>
+        <button class="reg_button">Зарегистрироваться</button>
+    </div>
+</div>
 </body>
 {% include 'footer.html' %}
 </html>

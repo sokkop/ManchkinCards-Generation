@@ -1,0 +1,106 @@
+body {
+    margin: 0;
+    height: 100vh;
+    position: absolute;
+    width: 100%;
+    background: #F3E8D5;
+    z-index: 0;
+    overflow-x: hidden;
+}
+
+
+.main_div {
+    position: absolute;
+    width: 466px;
+    height: 454px;
+    left: calc(50% - 466px/2);
+    top: 148px;
+    background: rgba(255, 255, 255, 0.46);
+    border-radius: 25px;
+}
+
+
+.reg_text {
+    position: relative;
+    width: 230px;
+    height: 48px;
+    left: calc(50% - 115px);
+    top: 20px;
+
+    font-family: 'Cormorant';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 48px;
+
+    color: #351A17;
+}
+
+
+.input_div {
+    position: relative;
+    width: 450px;
+    height: 200px;
+    left: calc(50% - 225px);
+    top: 10%;
+}
+
+.input_rec {
+    width: 400px;
+    height: 60px;
+    border-radius: 35px;
+    border: 1px solid #351A17;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-family: 'Cormorant';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+}
+
+
+.input_rec_2 {
+    margin-top: 30px;
+    width: 400px;
+    height: 60px;
+    border-radius: 35px;
+    border: 1px solid #351A17;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-family: 'Cormorant';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+}
+
+
+.reg_button {
+    margin-top: 30px;
+    left: calc(50% - 115px);
+    position: relative;
+    width: 230px;
+    height: 50px;
+    border-radius: 35px;
+    background-color: #351A17;
+
+    font-family: Cormorant;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0;
+    text-align: center;
+    color: #F3E8D5;
+}
+
+
+.manchkin_img {
+    position: absolute;
+    width: 913.27px;
+    height: 1161.98px;
+    left: 57%;
+    top: -295px;
+    transform: matrix(-1, -0.02, -0.02, 1, 0, 0);
+    z-index: 10;
+}
