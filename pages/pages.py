@@ -14,3 +14,8 @@ async def get_main_html(request: Request):
 @router.get("/login")
 async def get_login_html(request: Request):
     return templates.TemplateResponse(name='login.html', context={'request': request})
+
+
+@router.get("/auth")
+async def get_auth_html(request: Request):
+    return templates.TemplateResponse(name="auth.html", context={'request': request})

@@ -14,3 +14,8 @@ def root():
 @app.get("/login")
 def root():
     return ""
+
+
+@app.get("/auth")
+def root():
+    return

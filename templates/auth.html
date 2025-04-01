@@ -2,27 +2,25 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Регистрация</title>
+    <title>Вход</title>
     <link rel="stylesheet" href="/static/css/login.css">
 </head>
-<header>
-    {% include 'header.html' %}
-</header>
+{% include 'header.html' %}
 <body>
 <div>
     <img src="/static/img/manchkin.png" class="manchkin_img">
 </div>
 <div class="main_div">
-<h2 class="reg_text">Регистрация</h2>
+<h2 class="enter_text">Вход</h2>
     <div class="input_div">
         <label>
             <input type="text" class="input_rec" placeholder="Логин">
             <input type="password" class="input_rec_2" placeholder="Пароль">
         </label>
-        <button class="reg_button">Зарегистрироваться</button>
+        <button class="reg_button">Войти</button>
     </div>
     <div>
-        <a href="/auth" class="to_auth_text">Уже есть аккаунт?</a>
+        <a href="/login" class="to_reg_text">Зарегистрироваться</a>
     </div>
 </div>
 </body>

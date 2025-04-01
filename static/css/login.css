@@ -12,7 +12,7 @@ body {
 .main_div {
     position: absolute;
     width: 466px;
-    height: 454px;
+    height: 460px;
     left: calc(50% - 466px/2);
     top: 148px;
     background: rgba(255, 255, 255, 0.46);
@@ -37,10 +37,27 @@ body {
 }
 
 
+.enter_text {
+    position: relative;
+    width: 85px;
+    height: 48px;
+    left: calc(50% - 85px / 2);
+    top: 20px;
+
+    font-family: 'Cormorant';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 48px;
+
+    color: #351A17;
+}
+
+
 .input_div {
     position: relative;
     width: 450px;
-    height: 200px;
+    height: 300px;
     left: calc(50% - 225px);
     top: 10%;
 }
@@ -103,4 +120,28 @@ body {
     top: -295px;
     transform: matrix(-1, -0.02, -0.02, 1, 0, 0);
     z-index: 10;
+}
+
+
+.to_reg_text {
+    position: relative;
+    display: block;
+    left: calc(50% - 155px / 2);
+    width: 155px;
+    font-size: 18px;
+    font-family: Cormorant;
+    color: #351A17;
+    text-decoration: none;
+}
+
+
+.to_auth_text {
+    position: relative;
+    display: block;
+    left: calc(50% - 140px / 2);
+    width: 140px;
+    font-size: 18px;
+    font-family: Cormorant;
+    color: #351A17;
+    text-decoration: none;
 }
