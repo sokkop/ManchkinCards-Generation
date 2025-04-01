@@ -3,9 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <title>Главная страница</title>
+    <link rel="stylesheet" href="/static/css/index.css">
 </head>
+{% include 'header.html' %}
 <body>
-<a href="/login">Авторизация</a>
- <p>{{ text }}</p>
+<div class="main_div">
+    <h1>MUNCHKIN</h1>
+    <h2>играй и создавай карточки!</h2>
+    <div>
+        <a class="create_button">Создать карточку</a>
+    </div>
+    <div>
+        <img src="/static/img/manchkin.png" class="manchkin_img">
+    </div>
+    <div class="find_div">
+        <label>
+            <input type="text" class="find_input">
+        </label>
+        <a class="find_button"></a>
+        <div class="find_icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40px" height="40px" viewBox="0 0 16 16"><path fill="currentColor" fill-rule="evenodd" d="M11.5 7a4.5 4.5 0 1 1-9 0a4.5 4.5 0 0 1 9 0m-.82 4.74a6 6 0 1 1 1.06-1.06l2.79 2.79a.75.75 0 1 1-1.06 1.06z" clip-rule="evenodd"/></svg>
+        </div>
+    </div>
+</div>
 </body>
+{% include 'footer.html' %}
 </html>

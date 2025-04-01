@@ -1,0 +1,101 @@
+header {
+    position: relative;
+    width: 100%;
+    height: 60px;
+    background-color: #351A17;
+    z-index: 100;
+}
+
+.cormorant-Cormorant {
+    font-family: "Cormorant", serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.main_text {
+    position: absolute;
+    margin: 0;
+    width: 200px;
+    height: 27px;
+    left: 80.07px;
+    top: 16.5px;
+    font-size: 22px;
+    text-align: center;
+    color: #F3E8D5;
+    font-family: Cormorant;
+}
+
+
+.viking {
+    position: absolute;
+    width: 44px;
+    height: 44px;
+    left: 20px;
+    top: 8px;
+}
+
+
+.center {
+    position: absolute;
+    width: 303px;
+    height: 22px;
+    left: calc(50% - 303px/2);
+    top: 19px;
+}
+
+
+.rules {
+     position: absolute;
+    height: 22px;
+    width: 150px;
+    left: 568.5px;
+    right: 767.5px;
+    top: 19px;
+    font-family: 'Cormorant';
+    font-style: normal;
+    font-size: 18px;
+    line-height: 22px;
+    color: #F3E8D5;
+}
+
+
+.about {
+    position: absolute;
+    width: 100px;
+    height: 22px;
+    left: calc(50% - 76px/2 + 113.5px);
+    top: 19px;
+    font-family: 'Cormorant';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    color: #F3E8D5;
+}
+
+
+.login_button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 3px 31px;
+    gap: 10px;
+    text-decoration: none;
+
+    position: absolute;
+    width: 87px;
+    height: 38px;
+    left: 90%;
+    top: 9px;
+
+    font-family: 'Cormorant';
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    color: #502815;
+
+    background: #F3E8D5;
+    border-radius: 35px;
+}
