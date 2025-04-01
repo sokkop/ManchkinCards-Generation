@@ -1,45 +1,45 @@
-from sqlalchemy import Column, Integer, String, Text, Boolean, ForeignKey, Date
+from sqlalchemy import Column, Integer, String, Boolean, Text, ForeignKey, Date
 from sqlalchemy.orm import relationship
 from .base import Base
 
 
-class Collection(Base):
-    __tablename__ = "collections"
+class Card(Base):
+    __tablename__ = "cards"
 
     id = Column(Integer, primary_key=True, index=True)
+    type_id = Column(Integer, ForeignKey("card_type.id"), nullable=False)
     user_id = Column(Integer, ForeignKey("users.id"), nullable=False)
+    is_open = Column(Boolean, default=True)
     name = Column(String, nullable=False)
     description = Column(Text)
-    is_open = Column(Boolean, default=True)
+    image = Column(String)
+    like_count = Column(Integer, default=0)
 
-    user = relationship("User", back_populates="collections")
+    card_type = relationship("CardType")
 
 
-class CollectionLike(Base):
-    __tablename__ = "collection_likes"
+class CardLike(Base):
+    __tablename__ = "card_likes"
 
     id = Column(Integer, primary_key=True, index=True)
-    collection_id = Column(Integer, ForeignKey("collections.id"), nullable=False)
+    card_id = Column(Integer, ForeignKey("cards.id"), nullable=False)
     user_id = Column(Integer, ForeignKey("users.id"), nullable=False)
 
-class CollectionComment(Base):
-    __tablename__ = "collection_comments"
+
+class CardComment(Base):
+    __tablename__ = "card_comments"
 
     id = Column(Integer, primary_key=True, index=True)
-    collection_id = Column(Integer, ForeignKey("collections.id"), nullable=False)
+    card_id = Column(Integer, ForeignKey("cards.id"), nullable=False)
     user_id = Column(Integer, ForeignKey("users.id"), nullable=False)
     text = Column(Text, nullable=False)
     date = Column(Date, nullable=False)
     is_changed = Column(Boolean, default=False)
 
 
-class FavouritesCollection(Base):
-    __tablename__ = "favourites_collections"
+class FavouritesCard(Base):
+    __tablename__ = "favourites_cards"
 
     id = Column(Integer, primary_key=True, index=True)
     user_id = Column(Integer, ForeignKey("users.id"), nullable=False)
-    collection_id = Column(Integer, ForeignKey("collections.id"), nullable=False)
-
-
-
-
+    card_id = Column(Integer, ForeignKey("cards.id"), nullable=False)
