@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Профиль</title>
+    <link rel="stylesheet" href="/static/css/profile.css">
+</head>
+{% include 'header.html' %}
+<body>
+<div class="main_profile_div">
+    <div class="profile_div">
+        {% include 'svg/strelka.html' %}
+        <img src="/static/img/hohohowomen.jpg" class="profile_img">
+        <p>Логин: </p>
+        <p>Логин: </p>
+        <p>Логин: </p>
+    </div>
+    <div class="inf_div">
+        <h2>Мои альбомы</h2>
+        <div class="coll_div">
+            <div class="coll">
+                <h3 class="coll_name">Созданные</h3>
+                <img src="/static/img/dragon_card.jpg" class="coll_img">
+            </div>
+            <div class="coll">
+                <h3 class="coll_name">Созданные</h3>
+                <img src="/static/img/dragon_card.jpg" class="coll_img">
+            </div>
+            <div class="coll">
+                <h3 class="coll_name">Созданные</h3>
+                <img src="/static/img/dragon_card.jpg" class="coll_img">
+            </div>
+        </div>
+        <a class="create_card_button">Создать карточку</a>
+    </div>
+</div>
+</body>
+{% include 'footer.html' %}
+</html>
