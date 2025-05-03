@@ -1,5 +1,5 @@
 from sqlalchemy import Column, Integer, Text, ForeignKey, Boolean
-from .base import Base
+from backend.app.core.storage.postgres import Base
 
 
 class ThingCard(Base):
