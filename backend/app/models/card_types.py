@@ -2,7 +2,7 @@ from sqlalchemy import Column, Integer, Text, ForeignKey, Boolean
 from backend.app.core.storage.postgres import Base
 
 
-class ThingCard(Base):
+class ThingCards(Base):
     __tablename__ = "thing_cards"
 
     id = Column(Integer, ForeignKey("cards.id"), primary_key=True)
@@ -12,7 +12,7 @@ class ThingCard(Base):
     cost = Column(Integer)
 
 
-class BossCard(Base):
+class BossCards(Base):
     __tablename__ = "boss_cards"
 
     id = Column(Integer, ForeignKey("cards.id"), primary_key=True)
@@ -22,14 +22,14 @@ class BossCard(Base):
     treasure_count = Column(Integer)
 
 
-class CurseCard(Base):
+class CurseCards(Base):
     __tablename__ = "curse_cards"
 
     id = Column(Integer, ForeignKey("cards.id"), primary_key=True)
     curse_text = Column(Text)
 
 
-class OneThingCard(Base):
+class OneThingCards(Base):
     __tablename__ = "one_thing_cards"
 
     id = Column(Integer, ForeignKey("cards.id"), primary_key=True)
@@ -37,28 +37,28 @@ class OneThingCard(Base):
     cost = Column(Integer)
 
 
-class LevelUpCard(Base):
+class LevelUpCards(Base):
     __tablename__ = "level_up_cards"
 
     id = Column(Integer, ForeignKey("cards.id"), primary_key=True)
     level = Column(Integer, default=1)
 
 
-class ClassCard(Base):
+class ClassCards(Base):
     __tablename__ = "class_cards"
 
     id = Column(Integer, ForeignKey("cards.id"), primary_key=True)
     features = Column(Text)
 
 
-class RaceCard(Base):
+class RaceCards(Base):
     __tablename__ = "race_cards"
 
     id = Column(Integer, ForeignKey("cards.id"), primary_key=True)
     features = Column(Text)
 
 
-class UpdateCard(Base):
+class UpdateCards(Base):
     __tablename__ = "update_cards"
 
     id = Column(Integer, primary_key=True, index=True)
