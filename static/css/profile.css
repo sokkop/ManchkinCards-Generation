@@ -1,0 +1,107 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    margin: 0;
+    position: absolute;
+    width: 100%;
+    background: #F3E8D5;
+    z-index: 0;
+    overflow-x: hidden;
+}
+
+
+h2 {
+    width: 640px;
+    height: 58px;
+
+    font-family: 'Cormorant';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 58px;
+
+    color: #351A17;
+}
+
+
+h3 {
+    height: 58px;
+
+    font-family: 'Cormorant';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 58px;
+
+    color: #351A17;
+}
+
+
+.profile_img {
+    width: 345px;
+    height: 345px;
+    border-radius: 18px;
+}
+
+.coll_img {
+    width: 170px;
+    height: 270px;
+    border-radius: 20px;
+}
+
+
+.main_profile_div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 140px;
+    padding-top: 45px;
+}
+
+
+.profile_div {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.inf_div {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.coll_div {
+    display: flex;
+    flex-direction: row;
+    gap: 110px;
+    text-align: center;
+    padding-top: 30px;
+}
+
+
+.coll_name {
+    font-size: 20px;
+}
+
+
+.create_card_button {
+    width: 224px;
+    height: 48px;
+    background-color: #351A17;
+    border-radius: 35px;
+
+    color: #F3E8D5;
+    font-size: 20px;
+    font-family: 'Cormorant';
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 120px;
+}

@@ -19,3 +19,13 @@ async def get_login_html(request: Request):
 @router.get("/auth")
 async def get_auth_html(request: Request):
     return templates.TemplateResponse(name="auth.html", context={'request': request})
+
+
+@router.get("/create")
+async def get_create_card_change_hrml(request: Request):
+    return templates.TemplateResponse(name="create_card_change.html", context={'request': request})
+
+
+@router.get("/profile")
+async def get_profile_html(request: Request):
+    return templates.TemplateResponse(name="profile.html", context={'request': request})

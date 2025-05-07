@@ -1,0 +1,36 @@
+body {
+    margin: 0;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    background: #F3E8D5;
+    z-index: 0;
+    overflow-x: hidden;
+}
+
+
+h2 {
+    width: 640px;
+    height: 58px;
+
+    font-family: 'Cormorant';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 58px;
+
+    color: #351A17;
+}
+
+
+h3 {
+    height: 58px;
+
+    font-family: 'Cormorant';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 58px;
+
+    color: #351A17;
+}
