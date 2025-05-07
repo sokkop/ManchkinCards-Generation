@@ -2,13 +2,11 @@ from pydantic.v1 import BaseSettings
 
 
 class Settings(BaseSettings):
+    database_url: str
 
-    @property
-    def all_cors_origins(self) -> list[str]:
-        return [str(origin).rstrip("/") for origin in
-                self.BACKEND_CORS_ORIGINS] + [
-            self.FRONTEND_HOST
-        ]
+    class Config:
+        env_file = ".env"
 
 
 settings = Settings()
+
