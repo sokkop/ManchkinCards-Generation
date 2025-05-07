@@ -29,3 +29,8 @@ async def get_create_card_change_hrml(request: Request):
 @router.get("/profile")
 async def get_profile_html(request: Request):
     return templates.TemplateResponse(name="profile.html", context={'request': request})
+
+
+@router.get("/cardinformation")
+async def get_card_comment_html(request: Request):
+    return templates.TemplateResponse(name='card_information.html', context={'request': request})
