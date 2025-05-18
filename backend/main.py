@@ -1,6 +1,6 @@
 import os
+from pathlib import Path
 
-from authx.exceptions import MissingTokenError
 from fastapi import FastAPI
 from starlette.staticfiles import StaticFiles
 
@@ -24,11 +24,16 @@ async def missing_token_handler(request: Request, exc: MissingTokenError):
 
 Base.metadata.create_all(bind=engine)
 
+BASE_DIR = Path(__file__).resolve().parent
+app.mount("/images", StaticFiles(directory=BASE_DIR / "images"), name="images")
+
 app.mount(
     "/static",
     StaticFiles(directory=os.path.join(os.path.dirname(__file__), "../static")),
     name="static"
 )
+
+app.mount("/images", StaticFiles(directory=BASE_DIR / "images"), name="images")
 
 if __name__ == "__main__":
     uvicorn.run("main:app", host='localhost', port=8080)
