@@ -35,6 +35,22 @@ async def get_profile_html(request: Request):
 async def get_card_comment_html(request: Request):
     return templates.TemplateResponse(name='card_information.html', context={'request': request})
 
+
 @router.get("/createracecard")
 async def get_create_race_card_html(request: Request):
     return templates.TemplateResponse(name='CreatePages/create_race.html', context={'request': request})
+
+
+@router.get("/createclasscard")
+async def get_create_class_card_html(request: Request):
+    return templates.TemplateResponse(name='CreatePages/create_class.html', context={'request': request})
+
+
+@router.get("/createcursecard")
+async def get_create_curse_card_html(request: Request):
+    return templates.TemplateResponse(name='CreatePages/create_curse.html', context={'request': request})
+
+
+@router.get("/createlevelupcard")
+async def get_create_level_up_card_html(request: Request):
+    return templates.TemplateResponse(name='CreatePages/create_level_up.html', context={'request': request})
