@@ -7,22 +7,42 @@
 </head>
 {% include 'header.html' %}
 <body>
-<div class="card_inf_mmain_div">
+<div class="card_inf_main_div">
+    {% include 'svg/strelka.html' %}
     <div class="card_inf_div">
         <div class="card_img_div">
             <div class="img_div">
-
+                <img src="/static/img/dragon_card.jpg" class="card_img">
             </div>
             <div class="like_div">
-
+                <div class="like_element_div">
+                {% include 'svg/heart.html' %}
+                    <p>0</p>
+                </div>
+                <div class="like_element_div">
+                {% include 'svg/comment.html' %}
+                    <p>0</p>
+                </div>
             </div>
         </div>
         <div class="com_div">
             <div class="comment_div">
-
+                <h3>Ник</h3>
+                <p>Комментарий</p>
+            </div>
+            <div class="comment_div">
+                <h3>Ник</h3>
+                <p>Комментарий</p>
+            </div>
+            <div class="comment_div">
+                <h3>Ник</h3>
+                <p>Комментарий</p>
             </div>
             <div class="write_com_div">
-
+                <label>
+                <input type="text" placeholder="Введите текст">
+                    </label>
+                <button>Отправить</button>
             </div>
         </div>
     </div>
