@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Создать расу</title>
+    <link rel="stylesheet" href="/static/css/CreatePages/main_create_style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+</head>
+{% include 'header.html' %}
+<body>
+<div class="create_main_div">
+    <div class="create_race_div">
+        <div class="strelka_div">
+            {% include 'svg/strelka.html' %}
+        </div>
+        <div class="create_div">
+            <div class="head_div">
+                <h2>Карта Расы</h2>
+            </div>
+            <div class="create_input_div">
+                <h3>Название расы</h3>
+                <label>
+                <input type="text" placeholder="Тенсморы">
+                    </label>
+            </div>
+            <div class="create_textarea_div">
+                <h3>Описание расы</h3>
+                <label>
+                <textarea placeholder="Опишите расу"></textarea>
+                </label>
+            </div>
+            <div class="create_textarea_div">
+                <h3>Особенности расы</h3>
+                <label>
+                <textarea placeholder="Напишите особенности расы"></textarea>
+                </label>
+            </div>
+            <div class="create_button_div">
+                <button>Создать</button>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+{% include 'footer.html' %}
+</html>

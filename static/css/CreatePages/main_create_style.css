@@ -1,0 +1,115 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.cormorant-Cormorant {
+    font-family: "Cormorant", serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+}
+
+body {
+    background-color: #F3E8D5;
+}
+
+.strelka {
+    width: 22px;
+    height: 22px;
+}
+
+h2 {
+    font-family: Cormorant;
+    font-size: 40px;
+    font-weight: 600;
+    color: #351A17;
+}
+
+h3 {
+    font-family: Cormorant;
+    font-size: 20px;
+    font-weight: 400;
+    color: #351A17;
+}
+
+.create_main_div {
+    margin: 42px 100px;
+}
+
+.create_div {
+    margin: 46px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    width: 1200px;
+}
+
+.create_input_div {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.create_input_div input {
+    width: 100%;
+    height: 50px;
+    border-radius: 35px;
+    border: 1px solid #351A17;
+    padding: 0 18px;
+
+    font-family: Cormorant;
+    font-size: 20px;
+    font-weight: 400;
+    color: #502815;
+}
+
+.create_input_div input::placeholder {
+    font-family: Cormorant;
+    font-size: 20px;
+    font-weight: 400;
+    color: #502815A6;
+}
+
+.create_textarea_div {
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+}
+
+.create_textarea_div textarea {
+    width: 100%;
+    height: 125px;
+    border-radius: 35px;
+    border: solid 1px #502815;
+    resize: none;
+    padding: 15px 18px;
+
+    font-family: Cormorant;
+    font-size: 20px;
+    font-weight: 400;
+    color: #502815;
+}
+
+.create_textarea_div textarea::placeholder {
+    font-family: Cormorant;
+    font-size: 20px;
+    font-weight: 400;
+    color: #502815A6;
+}
+
+.create_button_div button {
+    width: 224px;
+    height: 48px;
+    border-radius: 35px;
+    background-color: #351A17;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+
+    font-family: Cormorant;
+    font-size: 20px;
+    font-weight: 700;
+    color: #F3E8D5;
+}
