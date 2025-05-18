@@ -54,3 +54,8 @@ async def get_create_curse_card_html(request: Request):
 @router.get("/createlevelupcard")
 async def get_create_level_up_card_html(request: Request):
     return templates.TemplateResponse(name='CreatePages/create_level_up.html', context={'request': request})
+
+
+@router.get("/createmonstercard")
+async def get_create_monster_card_html(request: Request):
+    return templates.TemplateResponse(name='CreatePages/create_monster.html', context={'request': request})
