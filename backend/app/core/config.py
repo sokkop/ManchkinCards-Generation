@@ -5,9 +5,8 @@ from pydantic.v1 import BaseSettings
 
 class Settings(BaseSettings):
     database_url: str
-    secret_key: str
-    algorithm: str
-    access_token_expire_minutes: int
+    jwt_access_cookie_name: str
+    jwt_secret_key: str
 
     class Config:
         env_file = ".env"
