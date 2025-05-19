@@ -59,3 +59,18 @@ async def get_create_level_up_card_html(request: Request):
 @router.get("/createmonstercard")
 async def get_create_monster_card_html(request: Request):
     return templates.TemplateResponse(name='CreatePages/create_monster.html', context={'request': request})
+
+
+@router.get("/createmodifiercard")
+async def get_create_modifier_card_html(request: Request):
+    return templates.TemplateResponse(name='CreatePages/create_modifier.html', context={'request': request})
+
+
+@router.get("/createthingcard")
+async def get_create_thing_card_html(request: Request):
+    return templates.TemplateResponse(name='CreatePages/create_thing.html', context={'request': request})
+
+
+@router.get("/createonethingcard")
+async def get_create_one_thing_card_html(request: Request):
+    return templates.TemplateResponse(name='CreatePages/create_one_thing.html', context={'request': request})

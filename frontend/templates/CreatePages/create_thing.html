@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Создать монстра</title>
+    <title>Создать шмотку</title>
     <link rel="stylesheet" href="/static/css/CreatePages/main_create_style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,24 +17,31 @@
         </div>
         <div class="create_div">
             <div class="head_div">
-                <h2>Карта Монстра</h2>
+                <h2>Карта Шмотки</h2>
             </div>
             <div class="create_input_div">
-                <h3>Название монстра</h3>
+                <h3>Название шмотки</h3>
                 <label>
                 <input type="text" placeholder="Мой друг">
                     </label>
             </div>
             <div class="create_count_div">
-                <h3>Количество уровней мностра</h3>
+                <h3>Количество рук</h3>
                 <div class="count_div">
                     <button type="button" class="minus1">-</button>
                     <p class="counter1">0</p>
                     <button type="button" class="plus1">+</button>
                 </div>
             </div>
+            <div class="create_boolean_div">
+                <h3>Большая шмотка</h3>
+                <div class="boolean_div" id="bool_switch">
+                    <div class="boolean_round"></div>
+                </div>
+                <input type="hidden" name="boolean_value" id="booleanValue" value="false">
+            </div>
             <div class="create_count_div">
-                <h3>Количество сокровищ</h3>
+                <h3>Количество бонусов</h3>
                 <div class="count_div">
                     <button type="button" class="minus2">-</button>
                     <p class="counter2">0</p>
@@ -42,7 +49,7 @@
                 </div>
             </div>
             <div class="create_count_div">
-                <h3>Количество уровней для повышения</h3>
+                <h3>Стоимость шмотки</h3>
                 <div class="count_div">
                     <button type="button" class="minus3">-</button>
                     <p class="counter3">0</p>
@@ -50,15 +57,9 @@
                 </div>
             </div>
             <div class="create_textarea_div">
-                <h3>Описание монстра</h3>
+                <h3>Описание шмотки</h3>
                 <label>
                 <textarea placeholder="Опишите монстра"></textarea>
-                </label>
-            </div>
-            <div class="create_textarea_div">
-                <h3>Непотребство</h3>
-                <label>
-                <textarea placeholder="СМЕРТЬ!!!"></textarea>
                 </label>
             </div>
             <div class="create_button_div">
@@ -68,6 +69,7 @@
     </div>
 </div>
 <script src="/static/js/MonsterCounter.js"></script>
+<script src="/static/js/BooleanThing.js"></script>
 </body>
 {% include 'footer.html' %}
 </html>

@@ -150,10 +150,57 @@ h3 {
     position: absolute;
 }
 
-.minus {
+.minus1 {
     left: 15px;
 }
 
-.plus {
+.plus1 {
     right: 15px;
+}
+
+.minus2 {
+    left: 15px;
+}
+
+.plus2 {
+    right: 15px;
+}
+
+.minus3 {
+    left: 15px;
+}
+
+.plus3 {
+    right: 15px;
+}
+
+.create_boolean_div {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.boolean_div {
+    position: relative;
+    width: 120px;
+    height: 36px;
+    border-radius: 19px;
+    background-color: #351A17;
+    border: 1px solid #351A17;
+    display: flex;
+    align-items: center
+}
+
+.boolean_round {
+    width: 26px;
+    height: 26px;
+    border-radius: 13px;
+    position: absolute;
+    background-color: #FFF;
+    left: 5px;
+}
+
+
+.boolean_div.active .boolean_round {
+    left: calc(100% - 31px);
 }
