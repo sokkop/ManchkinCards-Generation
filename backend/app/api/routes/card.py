@@ -1,5 +1,7 @@
 from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
+
+from backend.app.api.routes.auth import security
 from backend.app.core.storage.postgres import get_db
 from backend.app.schemas.card_types import (
     ThingCardCreate, ThingCardUpdate,
@@ -12,7 +14,7 @@ from backend.app.schemas.card_types import (
 )
 from backend.app.services.card_service import CardService
 
-router = APIRouter()
+router = APIRouter(dependencies=[Depends(security.access_token_required)])
 
 def get_card_service(db: Session = Depends(get_db)) -> CardService:
     return CardService(db)

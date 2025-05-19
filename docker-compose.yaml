@@ -7,6 +7,9 @@ services:
     depends_on:
       - postgres
     working_dir: /app
+    image: manchkincards:latest
+    volumes:
+      - ./backend/images:/app/backend/images
     env_file:
       - .env
 
